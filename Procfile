@@ -1,1 +1,1 @@
-web: ./build/install/kotlinserver/bin/adminchocobot
+web: build\install\robchoco.com.adminchocobot
