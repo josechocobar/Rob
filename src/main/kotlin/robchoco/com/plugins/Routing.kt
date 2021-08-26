@@ -7,6 +7,7 @@ import io.ktor.application.*
 import io.ktor.auth.*
 import io.ktor.html.*
 import io.ktor.response.*
+import io.ktor.util.*
 import kotlinx.html.*
 
 fun Application.configureRouting() {
@@ -25,7 +26,7 @@ fun Application.configureRouting() {
             basic("auth-basic") {
                 realm = "Access to the '/' path"
                 validate { credentials ->
-                    if (credentials.name == "jetbrains" && credentials.password == "foobar") {
+                    if (credentials.name == "jose" && credentials.password == "hola") {
                         UserIdPrincipal(credentials.name)
                     } else {
                         null
