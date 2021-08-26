@@ -36,9 +36,12 @@ fun Application.configureRouting() {
             }
         }
         authenticate("auth-basic") {
-            get("/") {
+            get("/hola") {
                 call.respondText("Hello, ${call.principal<UserIdPrincipal>()?.name}!")
             }
+        }
+        get {
+            call.respondText("Hello World!")
         }
 
 
