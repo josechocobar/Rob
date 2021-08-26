@@ -7,7 +7,8 @@ import java.io.File
 
 fun main() {
     //io.ktor.network.tls.certificates.generateCertificate(File("mycert.jks"))
-    embeddedServer(CIO, port = 8080, host = "0.0.0.0") {
+    val port = System.getenv("PORT")?.toInt() ?: 23567
+    embeddedServer(CIO, port=port) {
 
         configureRouting()
         configureHTTP()
