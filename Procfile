@@ -1,1 +1,1 @@
-web: build\install\robchoco.com.adminchocobot
+web: build/install/robchoco.com.adminchocobot/bin/robchoco.com.adminchocobot
